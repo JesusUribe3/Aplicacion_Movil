@@ -3,4 +3,5 @@
     <string name="Valor1">Ingrese el primer valor</string>
     <string name="Valor2">Ingrese el segundo valor</string>
     <string name="Resultado">El resultado es </string>
+
 </resources>

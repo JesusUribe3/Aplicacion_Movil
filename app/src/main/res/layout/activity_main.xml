@@ -4,25 +4,30 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@mipmap/v2"
     tools:context=".MainActivity"
     android:orientation="vertical">
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
+    </LinearLayout>
+
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="84dp"
         android:text="Operación Matemática Multiplicación"
         android:textAlignment="center"
+        android:textColor="@color/white"
         android:textSize="24dp"
-        android:textColor="@color/purple_200"
+        android:gravity="center"
+        android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" >
-    </TextView>
-    </LinearLayout>
+        app:layout_constraintTop_toTopOf="parent"></TextView>
+
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
@@ -30,21 +35,24 @@
 
         <TextView
 
-            android:text="@string/Valor1"
-            android:layout_width="0dp"
-            android:textSize="12dp"
-            android:textColor="@color/brown"
+            android:layout_width="171dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1">
-        </TextView>
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/Valor1"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:textStyle="italic"></TextView>
+
         <EditText
             android:id="@+id/Valor1"
-            android:hint="Ingrese el primer valor"
-            android:textColorHint="@color/azul"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="2">
-        </EditText>
+            android:layout_weight="2"
+            android:gravity="center"
+            android:hint="Ingrese el primer valor"
+            android:textColorHint="@color/azul"
+            android:textStyle="italic"></EditText>
     </LinearLayout>
     /////////////////////////////////////////////////////////////////////////////////////////
     <LinearLayout
@@ -54,20 +62,23 @@
 
         <TextView
 
-            android:text="@string/Valor2"
-            android:layout_width="0dp"
-            android:textSize="12dp"
-            android:textColor="@color/brown"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1">
-        </TextView>
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/Valor2"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:textStyle="italic"></TextView>
         <EditText
             android:id="@+id/Valor2"
             android:hint="Ingrese el segundo valor"
             android:textColorHint="@color/azul"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="2">
+            android:layout_weight="2"
+            android:textStyle="italic"
+            android:gravity="center">
         </EditText>
     </LinearLayout>
     //////////////////////////////////////////////////////
@@ -97,11 +108,12 @@
 
         <Button
             android:id="@+id/calcular"
+            android:layout_width="238dp"
+            android:layout_height="match_parent"
+            android:background="@mipmap/botoncito"
             android:hint="Calcular multiplicación"
             android:textColorHint="@color/azul"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            >
+            android:textSize="19dp">
 
         </Button>
     </LinearLayout>

@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Pantalla_2"
+    android:background="@mipmap/v3"
     android:orientation="vertical">
 
     <LinearLayout
@@ -13,13 +14,19 @@
         android:layout_height="wrap_content">
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Estás en la segunda pantalla "
+            android:layout_height="84dp"
+            android:text="TUTORIAL Y SOLUCIÓN"
             android:textAlignment="center"
+            android:textColor="@color/white"
             android:textSize="24dp"
-            android:textColor="@color/purple_200"
-            >
-        </TextView>
+            android:gravity="center"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"></TextView>
+
+
     </LinearLayout>
     <LinearLayout
         android:orientation="horizontal"
@@ -30,9 +37,11 @@
 
             android:text="El valor 1 es:"
             android:textSize="20dp"
-            android:textColor="@color/brown"
+            android:textColor="@color/white"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textStyle="italic"
             android:layout_weight="1">
         </TextView>
         <EditText
@@ -41,7 +50,9 @@
             android:textColorHint="@color/azul"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textStyle="italic">
         </EditText>
 
     </LinearLayout>
@@ -55,9 +66,11 @@
 
             android:text="El valor 2 es:"
             android:textSize="20dp"
-            android:textColor="@color/brown"
+            android:textColor="@color/white"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textStyle="italic"
             android:layout_weight="1">
         </TextView>
         <EditText
@@ -66,7 +79,9 @@
             android:textColorHint="@color/azul"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textStyle="italic">
         </EditText>
 
     </LinearLayout>
@@ -77,21 +92,42 @@
         android:layout_height="wrap_content">
 
         <TextView
-            android:text="La multiplicación es igual a:"
-            android:textColor="@color/brown"
-            android:textSize="15dp"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1">
-        </TextView>
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="La multiplicación es igual a:"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:textStyle="italic"></TextView>
         <EditText
             android:id="@+id/result"
             android:hint=" Segundo Valor"
             android:textColorHint="@color/azul"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textStyle="italic">
         </EditText>
     </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        >
 
+
+        <Button
+            android:id="@+id/AbrirTutorial"
+            android:hint="Abrir Tutorial"
+            android:textSize="25dp"
+            android:textColorHint="@color/azul"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+
+        </Button>
+    </LinearLayout>
 </LinearLayout>

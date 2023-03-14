@@ -3,11 +3,13 @@ package jesus.uribe.dispositivos.aplicacion_con_intents;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -74,11 +76,17 @@ public class MainActivity extends AppCompatActivity {
         String Val1 = Valor1Text.getText().toString();
         String Val2 = Valor2Text.getText().toString();
         String Igual = Resultado.getText().toString();
-        Intent pasarDato = new Intent(this,Pantalla_2.class);
-        pasarDato.putExtra("Elresultado", String.valueOf(result));
-        pasarDato.putExtra("LlamarValor1",Val1);
-        pasarDato.putExtra("LlamarValor2",Val2);
-        startActivity(pasarDato);
+
+        if (!Val1.isEmpty() && !Val2.isEmpty()){
+            Intent pasarDato = new Intent(this,Pantalla_2.class);
+            pasarDato.putExtra("Elresultado", String.valueOf(result));
+            pasarDato.putExtra("LlamarValor1",Val1);
+            pasarDato.putExtra("LlamarValor2",Val2);
+            startActivity(pasarDato);
+        }else{
+            Toast.makeText(MainActivity.this, "Favor llenar todos los datos", Toast.LENGTH_SHORT).show();
+        }
+
     }
 
 }
